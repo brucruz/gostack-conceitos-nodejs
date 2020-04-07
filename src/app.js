@@ -2,8 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const { uuid } = require('uuidv4');
 
-// const { uuid } = require("uuidv4");
-
 const app = express();
 
 app.use(express.json());
@@ -68,7 +66,6 @@ app.delete("/repositories/:id", (req, res) => {
 });
 
 app.post("/repositories/:id/like", (request, response) => {
-  // TODO
   const { id } = request.params;
 
   const repositoryIndex = repositories.findIndex(repository =>
